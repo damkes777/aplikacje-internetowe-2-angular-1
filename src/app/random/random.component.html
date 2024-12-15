@@ -1,1 +1,10 @@
-<p>random works!</p>
+<div class="random-container">
+    <p>Random component (max = {{ max }})</p>
+    <div>
+        <span>Random number: {{ randomNumber }}</span>
+        <button (click)="generateNumer()">Random</button>
+        <span [ngClass]="{'smaller': isSmaller, 'bigger': !isSmaller}">
+            {{ isSmaller ? 'lower half of the value' : 'upper half of the value' }}
+        </span>
+    </div>
+</div>
